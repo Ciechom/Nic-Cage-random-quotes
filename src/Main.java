@@ -42,6 +42,6 @@ public class Main {
     public static void Load(){
         Quotes q = new Quotes();
         q.setCytaty();
-        //System.out.print(q.cytaty.get(0));
+        System.out.print(q.cytaty.get(0));
     }
 }
