@@ -3,14 +3,14 @@ import javax.swing.*;
 public class Main {
 
     public static void main(String[] args) {
-        int userInput = Integer.parseInt(JOptionPane.showInputDialog("Podaj liczbe pomiedzy 1 a "+Limit()));  //user input.
-        Menu(userInput, Limit());
+        //int userInput = Integer.parseInt(JOptionPane.showInputDialog("Podaj liczbe pomiedzy 1 a "+Limit()));  //user input.
+        //Menu(userInput, Limit());
+        Load();
     }
     public static int Limit(){
         int limit = 2;
         return limit;
     }
-//TODO bugfixes
     public static void Menu(int userInput, int limit){
         while(userInput<=0||userInput>limit) {
             int trueFalse = JOptionPane.showConfirmDialog(null, "Podano zla liczbe, sprobowac jeszcze raz?", "Uwaga", JOptionPane.YES_NO_OPTION);
@@ -38,5 +38,10 @@ public class Main {
             case 2: System.out.println("Fucking iguanas..."); TryAgain(); break;
             default: System.out.println("Ummm wtf?");
         }
+    }
+    public static void Load(){
+        Quotes q = new Quotes();
+        q.setCytaty();
+        //System.out.print(q.cytaty.get(0));
     }
 }
